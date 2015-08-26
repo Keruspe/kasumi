@@ -1,17 +1,17 @@
 bin_PROGRAMS = kasumi
 
-kasumi_SOURCES = main.cxx intl.h \
-		KasumiDic.cxx KasumiDic.hxx \
-		KasumiWord.cxx KasumiWord.hxx \
-		KasumiWordType.cxx KasumiWordType.hxx \
-		KasumiString.cxx KasumiString.hxx \
-		KasumiException.cxx KasumiException.hxx \
-		KasumiMainWindow.cxx KasumiMainWindow.hxx \
-		KasumiAddWindow.cxx KasumiAddWindow.hxx \
-		KasumiDicEventListener.hxx \
-		KasumiWordEventListener.hxx \
-		KasumiConfiguration.cxx KasumiConfiguration.hxx \
-		cellrendererspin.c cellrendererspin.h \
+kasumi_SOURCES = src/main.cc src/intl.h \
+		src/KasumiDic.cc src/KasumiDic.hh \
+		src/KasumiWord.cc src/KasumiWord.hh \
+		src/KasumiWordType.cc src/KasumiWordType.hh \
+		src/KasumiString.cc src/KasumiString.hh \
+		src/KasumiException.cc src/KasumiException.hh \
+		src/KasumiMainWindow.cc src/KasumiMainWindow.hh \
+		src/KasumiAddWindow.cc src/KasumiAddWindow.hh \
+		src/KasumiDicEventListener.hh \
+		src/KasumiWordEventListener.hh \
+		src/KasumiConfiguration.cc src/KasumiConfiguration.hh \
+		src/cellrendererspin.c src/cellrendererspin.h \
 		kasumi.png \
 		kasumi.1 \
 		kasumi.desktop.in
