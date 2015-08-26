@@ -19,8 +19,6 @@ kasumi_SOURCES = src/main.cc src/intl.h \
 appicondir = $(datadir)/pixmaps
 appicon_DATA = kasumi.png
 
-kasumi_LDADD = $(INTLLIBS) $(LTLIBICONV)
-
 man_MANS = kasumi.1
 EXTRA_DIST = $(man_MANS)
 
@@ -35,3 +33,6 @@ SUBDIRS = po
 ACLOCAL_AMFLAGS = -I m4
 
 CLEANFILES = $(desktop_DATA)
+
+kasumi_CPPFLAGS = $(GTK_CFLAGS) -Isrc/
+kasumi_LDADD = $(INTLLIBS) $(LTLIBICONV) $(GTK_LIBS) $(ANTHY_LIBS)

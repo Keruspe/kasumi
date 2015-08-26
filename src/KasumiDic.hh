@@ -1,6 +1,6 @@
 /*********************************************************************
  * 
- * KasumiDic.hxx
+ * KasumiDic.hh
  * 
  * Kasumi - a management tool for a private dictionary of anthy
  * 
@@ -33,11 +33,11 @@
 #include <string>
 #include <vector>
 #include <list>
-#include "KasumiWord.hxx"
-#include "KasumiException.hxx"
-#include "KasumiDicEventListener.hxx"
-#include "KasumiWordEventListener.hxx"
-#include "KasumiConfiguration.hxx"
+#include "KasumiWord.hh"
+#include "KasumiException.hh"
+#include "KasumiDicEventListener.hh"
+#include "KasumiWordEventListener.hh"
+#include "KasumiConfiguration.hh"
 
 #define ERROR 0
 #define VALID 1

@@ -31,10 +31,10 @@
 #include <getopt.h> /* for getopt_long() */
 #include <anthy/dicutil.h>
 
-#include "KasumiConfiguration.hxx"
-#include "KasumiException.hxx"
-#include "KasumiString.hxx"
-#include "KasumiWordType.hxx"
+#include "KasumiConfiguration.hh"
+#include "KasumiException.hh"
+#include "KasumiString.hh"
+#include "KasumiWordType.hh"
 #include "intl.h"
 
 #ifdef HAVE_CONFIG_H

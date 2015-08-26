@@ -23,11 +23,11 @@
  * 
 *********************************************************************/
 
-#include "KasumiDic.hxx"
-#include "KasumiWord.hxx"
-#include "KasumiString.hxx"
-#include "KasumiException.hxx"
-#include "KasumiConfiguration.hxx"
+#include "KasumiDic.hh"
+#include "KasumiWord.hh"
+#include "KasumiString.hh"
+#include "KasumiException.hh"
+#include "KasumiConfiguration.hh"
 extern "C"{  // ad-hoc solution for a defect of Anthy
 #include <anthy/dicutil.h>
 }

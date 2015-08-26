@@ -1,6 +1,6 @@
 /*********************************************************************
  * 
- * KasumiWordEventListener.hxx
+ * KasumiWordEventListener.hh
  * 
  * Kasumi - a management tool for a private dictionary of anthy
  * 
@@ -30,7 +30,7 @@
 #include "config.h"
 #endif
 
-#include "KasumiWord.hxx"
+#include "KasumiWord.hh"
 
 class KasumiWord;
 

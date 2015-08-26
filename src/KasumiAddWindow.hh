@@ -1,6 +1,6 @@
 /*********************************************************************
  * 
- * KasumiAddWindow.hxx
+ * KasumiAddWindow.hh
  * 
  * Kasumi - a management tool for a private dictionary of anthy
  * 
@@ -32,9 +32,9 @@
 #endif
 
 #include <gtk/gtk.h>
-#include "KasumiDic.hxx"
-#include "KasumiWord.hxx"
-#include "KasumiConfiguration.hxx"
+#include "KasumiDic.hh"
+#include "KasumiWord.hh"
+#include "KasumiConfiguration.hh"
 
 void _call_back_add_window_delete_event(GtkWidget *widget,
                                         GdkEvent *event,

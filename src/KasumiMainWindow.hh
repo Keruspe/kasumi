@@ -1,6 +1,6 @@
 /*********************************************************************
  * 
- * KasumiMainWindow.hxx
+ * KasumiMainWindow.hh
  * 
  * Kasumi - a management tool for a private dictionary of anthy
  * 
@@ -33,9 +33,9 @@
 
 #include <gtk/gtk.h>
 #include <string>
-#include "KasumiDic.hxx"
-#include "KasumiDicEventListener.hxx"
-#include "KasumiConfiguration.hxx"
+#include "KasumiDic.hh"
+#include "KasumiDicEventListener.hh"
+#include "KasumiConfiguration.hh"
 
 enum column_name
 {

@@ -26,7 +26,7 @@
 #include <gtk/gtk.h>
 #include <cstdlib>
 #include <iostream>
-#include "KasumiException.hxx"
+#include "KasumiException.hh"
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"

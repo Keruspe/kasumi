@@ -23,8 +23,8 @@
  * 
 *********************************************************************/
 
-#include "KasumiWordType.hxx"
-#include "KasumiWord.hxx"
+#include "KasumiWordType.hh"
+#include "KasumiWord.hh"
 #include "intl.h"
 
 // static members of KasumiWordType

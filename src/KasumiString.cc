@@ -23,7 +23,7 @@
  * 
 *********************************************************************/
 
-#include "KasumiString.hxx"
+#include "KasumiString.hh"
 #include <cstdlib>
 #include <iostream>
 #include <sstream>

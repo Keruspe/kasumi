@@ -1,6 +1,6 @@
 /*********************************************************************
  * 
- * KasumiString.hxx
+ * KasumiString.hh
  * 
  * Kasumi - a management tool for a private dictionary of anthy
  * 

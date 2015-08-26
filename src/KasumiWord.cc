@@ -28,10 +28,10 @@
 #include <cstring>
 #include <map>
 #include <iconv.h>
-#include "KasumiWord.hxx"
-#include "KasumiException.hxx"
-#include "KasumiConfiguration.hxx"
-#include "KasumiString.hxx" // for EUCJP_***(constant string)
+#include "KasumiWord.hh"
+#include "KasumiException.hh"
+#include "KasumiConfiguration.hh"
+#include "KasumiString.hh" // for EUCJP_***(constant string)
 #include "intl.h"
 
 #include <iostream>
@@ -55,7 +55,7 @@ string KasumiWord::convertUTF8ToEUCJP(const string &aUTF8){
     char *eucjp_buf = (char*)malloc(len_eucjp);
     char *eucjp = eucjp_buf;
 
-    iconv(IconvUTF8_To_EUCJP, const_cast<ICONV_CONST char**>(&utf8), &len, &eucjp_buf, &len_eucjp);
+    iconv(IconvUTF8_To_EUCJP, const_cast<char**>(&utf8), &len, &eucjp_buf, &len_eucjp);
     return string(eucjp);
 }
 
@@ -67,7 +67,7 @@ string KasumiWord::convertEUCJPToUTF8(const string &aEUCJP){
     char *utf8_buf = (char*)malloc(len_utf8);
     char *utf8 = utf8_buf;
 
-    iconv(IconvEUCJP_To_UTF8, const_cast<ICONV_CONST char**>(&eucjp), &len, &utf8_buf, &len_utf8);
+    iconv(IconvEUCJP_To_UTF8, const_cast<char**>(&eucjp), &len, &utf8_buf, &len_utf8);
     return string(utf8);
 }
 

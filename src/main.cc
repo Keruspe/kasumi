@@ -34,11 +34,11 @@
 #include <time.h>
 #include <iostream>
 #include <string>
-#include "KasumiDic.hxx"
-#include "KasumiMainWindow.hxx"
-#include "KasumiAddWindow.hxx"
-#include "KasumiConfiguration.hxx"
-#include "KasumiException.hxx"
+#include "KasumiDic.hh"
+#include "KasumiMainWindow.hh"
+#include "KasumiAddWindow.hh"
+#include "KasumiConfiguration.hh"
+#include "KasumiException.hh"
 #include "intl.h"
 extern "C"{  // ad-hoc solution for a defect of Anthy
 #include <anthy/anthy.h>

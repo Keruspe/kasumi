@@ -1,6 +1,6 @@
 /*********************************************************************
  * 
- * KasumiConfiguration.hxx
+ * KasumiConfiguration.hh
  * 
  * Kasumi - a management tool for a private dictionary of anthy
  * 
@@ -31,7 +31,7 @@
 #endif
 
 #include <map>
-#include "KasumiException.hxx"
+#include "KasumiException.hh"
 
 class KasumiConfiguration{
 private:

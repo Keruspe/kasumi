@@ -28,13 +28,13 @@
 #include "cellrendererspin.h"
 #include <cstdlib>
 #include <iostream>
-#include "KasumiMainWindow.hxx"
-#include "KasumiException.hxx"
-#include "KasumiWord.hxx"
-#include "KasumiDic.hxx"
-#include "KasumiString.hxx"
-#include "KasumiAddWindow.hxx"
-#include "KasumiConfiguration.hxx"
+#include "KasumiMainWindow.hh"
+#include "KasumiException.hh"
+#include "KasumiWord.hh"
+#include "KasumiDic.hh"
+#include "KasumiString.hh"
+#include "KasumiAddWindow.hh"
+#include "KasumiConfiguration.hh"
 #include <gdk/gdkkeysyms.h>
 #include "intl.h"
 extern "C"{  // ad-hoc solution for a defect of Anthy

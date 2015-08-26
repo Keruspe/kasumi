@@ -27,12 +27,12 @@
 #include <gtk/gtk.h>
 #include <iostream>
 #include <algorithm>
-#include "KasumiAddWindow.hxx"
-#include "KasumiWord.hxx"
-#include "KasumiDic.hxx"
-#include "KasumiString.hxx"
-#include "KasumiConfiguration.hxx"
-#include "KasumiMainWindow.hxx"
+#include "KasumiAddWindow.hh"
+#include "KasumiWord.hh"
+#include "KasumiDic.hh"
+#include "KasumiString.hh"
+#include "KasumiConfiguration.hh"
+#include "KasumiMainWindow.hh"
 #include <gdk/gdkkeysyms.h>
 #include "intl.h"
 extern "C"{  // ad-hoc solution for a defect of Anthy

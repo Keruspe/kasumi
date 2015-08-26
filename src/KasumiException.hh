@@ -1,6 +1,6 @@
 /*********************************************************************
  * 
- * KasumiException.hxx
+ * KasumiException.hh
  * 
  * Kasumi - a management tool for a private dictionary of anthy
  * 
