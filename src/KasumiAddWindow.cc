@@ -59,9 +59,6 @@ KasumiAddWindow::KasumiAddWindow(KasumiDic *aDictionary,
     g_signal_connect(G_OBJECT(window), "delete_event",
 		     G_CALLBACK(_call_back_add_window_delete_event), this);
 
-    // tooltips for every widget
-    Tooltips = gtk_tooltips_new();
-
     // creating vbox for text entries, spin button and so on.
     GtkWidget *vbox = gtk_vbox_new(FALSE,0);
     gtk_container_set_border_width(GTK_CONTAINER(vbox), 6);
@@ -111,7 +108,7 @@ KasumiAddWindow::KasumiAddWindow(KasumiDic *aDictionary,
     const int FREQ_DEFAULT = conf->getPropertyValueByInt("DefaultFrequency");
     const int FREQ_LBOUND = conf->getPropertyValueByInt("MinFrequency");  
     const int FREQ_UBOUND = conf->getPropertyValueByInt("MaxFrequency");
-    GtkObject *adjustment = gtk_adjustment_new(FREQ_DEFAULT,
+    GtkAdjustment *adjustment = gtk_adjustment_new(FREQ_DEFAULT,
 					       FREQ_LBOUND,
 					       FREQ_UBOUND,
 					       1,
@@ -205,16 +202,14 @@ KasumiAddWindow::KasumiAddWindow(KasumiDic *aDictionary,
 	gtk_box_pack_start(GTK_BOX(hbutton_box),GTK_WIDGET(button),TRUE,TRUE,0);
 	g_signal_connect(G_OBJECT(button),"clicked",
 			 G_CALLBACK(_call_back_add_window_add),this);
-	gtk_tooltips_set_tip(Tooltips, button,
-			     _("Add entered word and quit registration."),
-			     _("If all the necessary items are filled in, add entered word and quit registration."));
+	gtk_widget_set_tooltip_text(button,
+			     _("Add entered word and quit registration."));
 
 	button = gtk_button_new_from_stock(GTK_STOCK_CLOSE);
 	gtk_box_pack_start(GTK_BOX(hbutton_box),GTK_WIDGET(button),TRUE,TRUE,0);
 	g_signal_connect(G_OBJECT(button),"clicked",
 			 G_CALLBACK(_call_back_add_window_quit),this);
-	gtk_tooltips_set_tip(Tooltips, button,
-			     _("Cancel registration and quit."),
+	gtk_widget_set_tooltip_text(button,
 			     _("Cancel registration and quit."));
 
 	gtk_window_set_keep_above(GTK_WINDOW(window), TRUE);
@@ -227,25 +222,22 @@ KasumiAddWindow::KasumiAddWindow(KasumiDic *aDictionary,
 	gtk_box_pack_start(GTK_BOX(hbutton_box),GTK_WIDGET(button),TRUE,TRUE,0);
 	g_signal_connect(G_OBJECT(button),"clicked",
 			 G_CALLBACK(_call_back_add_window_add),this);
-	gtk_tooltips_set_tip(Tooltips, button,
-			     _("Add entered word"),
-			     _("If all the necessary items are filled in, add entered word."));
+	gtk_widget_set_tooltip_text (button,
+			     _("Add entered word"));
 
 	button = gtk_button_new_from_stock(GTK_STOCK_EDIT);
 	gtk_box_pack_start(GTK_BOX(hbutton_box),GTK_WIDGET(button),TRUE,TRUE,0);
 	g_signal_connect(G_OBJECT(button),"clicked",
 			 G_CALLBACK(_call_back_manage_mode),this);
-	gtk_tooltips_set_tip(Tooltips, button,
-			     _("Manage mode"),
-			     _("Make the shift to manage mode to modify and remove registered words."));
+	gtk_widget_set_tooltip_text (button,
+			     _("Manage mode"));
 
 	button = gtk_button_new_from_stock(GTK_STOCK_CLOSE);
 	gtk_box_pack_start(GTK_BOX(hbutton_box),GTK_WIDGET(button),TRUE,TRUE,0);
 	g_signal_connect(G_OBJECT(button),"clicked",
 			 G_CALLBACK(_call_back_add_window_quit),this);
-	gtk_tooltips_set_tip(Tooltips, button,
-			     _("Quit this application"),
-			     _("Save dictionary and quit this application."));
+	gtk_widget_set_tooltip_text (button,
+			     _("Quit this application"));
 
 	// get selection at the time of launching
 	g_signal_connect(G_OBJECT(SpellingEntry),"selection_received",
@@ -443,16 +435,15 @@ void _call_back_manage_mode(GtkWidget *widget,
 void _call_back_selection_data_received(GtkWidget *widget,
                                         GtkSelectionData *selection_data,
                                         gpointer data){
-    if(selection_data->length < 0){
+    if(gtk_selection_data_get_length (selection_data) < 0){
 	// failed retrieving selection
 	// do nothing
 	return;
     }
 
-    string atom_name = string(gdk_atom_name(selection_data->type));
+    string atom_name = string(gdk_atom_name(gtk_selection_data_get_data_type (selection_data)));
 
-    gchar *str;
-    str = reinterpret_cast<gchar*>(selection_data->data);
+    const gchar *str = reinterpret_cast<const gchar *>(gtk_selection_data_get_data (selection_data));
 
     if(atom_name == "UTF8_STRING"){
 	gtk_entry_set_text(GTK_ENTRY(widget), str);

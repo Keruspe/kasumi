@@ -52,8 +52,7 @@
  */
 
 #include "cellrendererspin.h"
-#include <gtk/gtkadjustment.h>
-#include <gtk/gtkspinbutton.h>
+#include <gtk/gtk.h>
 #include <stdlib.h>
 
 #define GUI_CELL_RENDERER_SPIN_PATH     "gui-cell-renderer-spin-path"
@@ -248,7 +247,9 @@ gui_cell_renderer_spin_editing_done (GtkCellEditable *spinbutton,
                 info->focus_out_id = 0;
         }
 
-  if (GTK_ENTRY(spinbutton)->editing_canceled)
+    gboolean editing_canceled;
+    g_object_get (spinbutton, "editing-canceled", &editing_canceled, NULL);
+  if (editing_canceled)
     return;
 
   path = g_object_get_data (G_OBJECT (spinbutton), GUI_CELL_RENDERER_SPIN_PATH);
@@ -322,14 +323,14 @@ gui_cell_renderer_spin_start_editing (GtkCellRenderer      *cell,
         spincell = GUI_CELL_RENDERER_SPIN(cell);
 
   /* If the cell isn't editable we return NULL. */
-  if (celltext->editable == FALSE)
+  if (gtk_editable_get_editable (GTK_EDITABLE (celltext) == FALSE))
     return NULL;
 
   spinbutton = g_object_new (GTK_TYPE_SPIN_BUTTON, "has_frame", FALSE, "numeric", TRUE, NULL);
 
         /* dirty */
-  if (celltext->text)
-                curval = atof(celltext->text);
+  if (gtk_entry_get_text (celltext))
+                curval = atof(gtk_entry_get_text (celltext));
 
         adj = GTK_ADJUSTMENT(gtk_adjustment_new(curval,
                                                 spincell->lower,

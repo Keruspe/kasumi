@@ -102,13 +102,13 @@ static void cb_selection_get(GtkWidget *widget,
   gchar *text = NULL;
   gint length = 0;
 
-  if (data->selection == atom0) {
+  if (gtk_selection_data_get_selection (data) == atom0) {
     text = "Kasumi Selection";
     length = strlen(text);
     gtk_selection_convert(window, atom1,
 			  GDK_SELECTION_TYPE_STRING,
 			  GDK_CURRENT_TIME);
-  } else if (data->selection == atom1 && arg_text != NULL) {
+  } else if (gtk_selection_data_get_selection (data) == atom1 && arg_text != NULL) {
     text = arg_text;
     arg_text = NULL;
     length = strlen(text);
@@ -116,7 +116,7 @@ static void cb_selection_get(GtkWidget *widget,
 
   if (text != NULL) {
     gtk_selection_data_set_text(data, text, length);
-    if (data->selection == atom1)
+    if (gtk_selection_data_get_selection (data) == atom1)
       g_free(text);
   }
 }
@@ -126,9 +126,9 @@ static void cb_selection_received(GtkWidget *widget,
 				  guint time,
 				  gpointer user_data)
 {
-  if (data->selection == atom0) {
-    instance = MAX(data->length, 0);
-  } else if (data->selection == atom1 && data->length > 0) {
+  if (gtk_selection_data_get_selection (data) == atom0) {
+    instance = MAX(gtk_selection_data_get_length (data), 0);
+  } else if (gtk_selection_data_get_selection (data) == atom1 && gtk_selection_data_get_length (data) > 0) {
   }
 }
 

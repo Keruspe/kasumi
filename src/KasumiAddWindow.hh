@@ -77,7 +77,6 @@ private:
     GtkWidget *FrequencySpin;
     GtkWidget *WordTypeCategoryCombo;
     GtkWidget *WordTypeCombo;
-    GtkTooltips *Tooltips;
 
     GtkTreeIter defaultWordTypeCategoryIter;
   

@@ -27,7 +27,7 @@
 #ifndef _cellrendererspin_h_included_
 #define _cellrendererspin_h_included_
 
-#include <gtk/gtkcellrenderertext.h>
+#include <gtk/gtk.h>
 
 G_BEGIN_DECLS
 
