@@ -6,18 +6,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: it\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-21 18:18+0900\n"
+"Report-Msgid-Bugs-To: Marc-Antoine@Perennou.com\n"
+"POT-Creation-Date: 2015-08-26 16:51+0200\n"
 "PO-Revision-Date: 2006-06-25 13:04+0900\n"
 "Last-Translator: Diego 'Flameeyes' Pettenò <flameeyes@gentoo.org>\n"
 "Language-Team: Italian\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.2\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: KasumiWord.cxx:191 KasumiWord.cxx:214
+#: ../src/KasumiWord.cc:191 ../src/KasumiWord.cc:214
 msgid ""
 "Sound must consist of only Hiragana characters. You have entered invalid "
 "character: "
@@ -25,245 +26,253 @@ msgstr ""
 "Il suono deve contenere solo caratteri Hiragana. Sono stati inseriti "
 "caratteri non validi."
 
-#: KasumiMainWindow.cxx:81
+#: ../src/KasumiMainWindow.cc:81
 msgid "Kasumi"
 msgstr "Kasumi"
 
-#: KasumiMainWindow.cxx:106
+#: ../src/KasumiMainWindow.cc:106
 msgid "<b>Search:</b>"
 msgstr ""
 
-#: KasumiMainWindow.cxx:118
+#: ../src/KasumiMainWindow.cc:118
 msgid "Search by Spelling"
 msgstr "Cerca per ortografia"
 
-#: KasumiMainWindow.cxx:124
+#: ../src/KasumiMainWindow.cc:124
 msgid "Search by Sound"
 msgstr "Cerca per suono"
 
-#: KasumiMainWindow.cxx:180 KasumiAddWindow.cxx:71
+#. creating text entries for "Spelling"
+#: ../src/KasumiMainWindow.cc:180 ../src/KasumiAddWindow.cc:68
 msgid "Spelling"
 msgstr "Ortografia"
 
-#: KasumiMainWindow.cxx:196 KasumiAddWindow.cxx:88
+#. creating text entries for "Sound"
+#: ../src/KasumiMainWindow.cc:196 ../src/KasumiAddWindow.cc:85
 msgid "Sound"
 msgstr "Suono"
 
-#: KasumiMainWindow.cxx:222 KasumiAddWindow.cxx:105
+#. creating spin button for "Frequency"
+#: ../src/KasumiMainWindow.cc:222 ../src/KasumiAddWindow.cc:102
 msgid "Frequency"
 msgstr "Frequenza"
 
-#: KasumiMainWindow.cxx:257
+#: ../src/KasumiMainWindow.cc:257
 msgid "WordClass"
 msgstr "WordClass"
 
-#: KasumiMainWindow.cxx:375
+#: ../src/KasumiMainWindow.cc:375
 msgid ""
 "Your dictionary was changed. Do you save these changes before Kasumi quits?"
 msgstr ""
 "Il tuo vocabolario è stato cambiato. Si vogliono salvare queste modifiche "
 "prima di uscire da Kasumi?"
 
-#: KasumiAddWindow.cxx:58
+#: ../src/KasumiAddWindow.cc:58
 msgid "Kasumi (Register words)"
 msgstr ""
 
-#: KasumiAddWindow.cxx:127
+#. creating combo box for "Word Type"
+#: ../src/KasumiAddWindow.cc:124
 msgid "Word Type"
 msgstr "Tipo di parola"
 
-#: KasumiAddWindow.cxx:176
+#. creating combo box for "Subcategory of Word Type"
+#: ../src/KasumiAddWindow.cc:173
 msgid "Subcategory of Word Type"
 msgstr ""
 
-#: KasumiAddWindow.cxx:209
+#: ../src/KasumiAddWindow.cc:206
 #, fuzzy
 msgid "Add entered word and quit registration."
 msgstr "Salva il vocabolario ed esci da questa applicazione."
 
-#: KasumiAddWindow.cxx:210
-#, fuzzy
-msgid ""
-"If all the necessary items are filled in, add entered word and quit "
-"registration."
-msgstr ""
-"Se tutti gli oggetti necessari sono stati riempiti, aggiungi la parola "
-"inserita."
-
-#: KasumiAddWindow.cxx:217 KasumiAddWindow.cxx:218
+#: ../src/KasumiAddWindow.cc:213
 #, fuzzy
 msgid "Cancel registration and quit."
 msgstr "Salva il vocabolario ed esci da questa applicazione."
 
-#: KasumiAddWindow.cxx:231
+#: ../src/KasumiAddWindow.cc:226
 msgid "Add entered word"
 msgstr "Aggiungi la parola inserita"
 
-#: KasumiAddWindow.cxx:232
-msgid "If all the necessary items are filled in, add entered word."
-msgstr ""
-"Se tutti gli oggetti necessari sono stati riempiti, aggiungi la parola "
-"inserita."
-
-#: KasumiAddWindow.cxx:239
+#: ../src/KasumiAddWindow.cc:233
 msgid "Manage mode"
 msgstr "Modalità gestione"
 
-#: KasumiAddWindow.cxx:240
-msgid "Make the shift to manage mode to modify and remove registered words."
-msgstr ""
-"Passa a modalità gestione per modificare e rimuovere le parole registrate."
-
-#: KasumiAddWindow.cxx:247
+#: ../src/KasumiAddWindow.cc:240
 msgid "Quit this application"
 msgstr "Esci da questa applicazione"
 
-#: KasumiAddWindow.cxx:248
-msgid "Save dictionary and quit this application."
-msgstr "Salva il vocabolario ed esci da questa applicazione."
-
-#: KasumiAddWindow.cxx:299
+#: ../src/KasumiAddWindow.cc:291
 msgid "Invalid entry for Sound."
 msgstr "Elemento per \"suono\" non valido."
 
-#: KasumiAddWindow.cxx:312
+#: ../src/KasumiAddWindow.cc:304
 msgid "Invalid entry for Spelling."
 msgstr "Elemento per \"ortografia\" non valido. "
 
-#: KasumiWordType.cxx:36 KasumiWordType.cxx:37 KasumiWordType.cxx:38
-#: KasumiWordType.cxx:39 KasumiWordType.cxx:40 KasumiWordType.cxx:41
+#: ../src/KasumiWordType.cc:36 ../src/KasumiWordType.cc:37
+#: ../src/KasumiWordType.cc:38 ../src/KasumiWordType.cc:39
+#: ../src/KasumiWordType.cc:40 ../src/KasumiWordType.cc:41
 #, fuzzy
 msgid "Noun"
 msgstr "Suono"
 
-#: KasumiWordType.cxx:36
+#: ../src/KasumiWordType.cc:36
 msgid "General Noun"
 msgstr ""
 
-#: KasumiWordType.cxx:37
+#: ../src/KasumiWordType.cc:37
 msgid "followed by NA, SA and SURU"
 msgstr ""
 
-#: KasumiWordType.cxx:38
+#: ../src/KasumiWordType.cc:38
 msgid "followed by NA and SA"
 msgstr ""
 
-#: KasumiWordType.cxx:39
+#: ../src/KasumiWordType.cc:39
 msgid "followed by NA and SURU"
 msgstr ""
 
-#: KasumiWordType.cxx:40
+#: ../src/KasumiWordType.cc:40
 msgid "followed by NA"
 msgstr ""
 
-#: KasumiWordType.cxx:41 KasumiWordType.cxx:51
+#: ../src/KasumiWordType.cc:41 ../src/KasumiWordType.cc:51
 msgid "followed by SURU"
 msgstr ""
 
-#: KasumiWordType.cxx:42 KasumiWordType.cxx:43 KasumiWordType.cxx:44
+#: ../src/KasumiWordType.cc:42 ../src/KasumiWordType.cc:43
+#: ../src/KasumiWordType.cc:44
 msgid "Proper Noun"
 msgstr ""
 
-#: KasumiWordType.cxx:42
+#: ../src/KasumiWordType.cc:42
 msgid "Name of people"
 msgstr ""
 
-#: KasumiWordType.cxx:43
+#: ../src/KasumiWordType.cc:43
 msgid "Geographic Name"
 msgstr ""
 
-#: KasumiWordType.cxx:44
+#: ../src/KasumiWordType.cc:44
 msgid "Corporate Name"
 msgstr ""
 
-#: KasumiWordType.cxx:45
+#: ../src/KasumiWordType.cc:45
 msgid "Numeral"
 msgstr ""
 
-#: KasumiWordType.cxx:46
+#: ../src/KasumiWordType.cc:46
 msgid "Adjective (Keiyoushi)"
 msgstr ""
 
-#: KasumiWordType.cxx:47 KasumiWordType.cxx:48 KasumiWordType.cxx:49
-#: KasumiWordType.cxx:50 KasumiWordType.cxx:51
+#: ../src/KasumiWordType.cc:47 ../src/KasumiWordType.cc:48
+#: ../src/KasumiWordType.cc:49 ../src/KasumiWordType.cc:50
+#: ../src/KasumiWordType.cc:51
 msgid "Adverb"
 msgstr ""
 
-#: KasumiWordType.cxx:47
+#: ../src/KasumiWordType.cc:47
 msgid "General Adverb"
 msgstr ""
 
-#: KasumiWordType.cxx:48
+#: ../src/KasumiWordType.cc:48
 msgid "followed by TO and TARU"
 msgstr ""
 
-#: KasumiWordType.cxx:49
+#: ../src/KasumiWordType.cc:49
 msgid "followed by TO and SURU"
 msgstr ""
 
-#: KasumiWordType.cxx:50
+#: ../src/KasumiWordType.cc:50
 msgid "followed by TO"
 msgstr ""
 
-#: KasumiWordType.cxx:52
+#: ../src/KasumiWordType.cc:52
 msgid "Interjection"
 msgstr ""
 
-#: KasumiWordType.cxx:53
+#: ../src/KasumiWordType.cc:53
 msgid "Adnominal adjunct"
 msgstr ""
 
-#: KasumiWordType.cxx:54
+#: ../src/KasumiWordType.cc:54
 msgid "Single Kanji Character"
 msgstr ""
 
-#: KasumiWordType.cxx:55 KasumiWordType.cxx:56 KasumiWordType.cxx:57
-#: KasumiWordType.cxx:58 KasumiWordType.cxx:59 KasumiWordType.cxx:60
-#: KasumiWordType.cxx:61 KasumiWordType.cxx:62 KasumiWordType.cxx:63
+#: ../src/KasumiWordType.cc:55 ../src/KasumiWordType.cc:56
+#: ../src/KasumiWordType.cc:57 ../src/KasumiWordType.cc:58
+#: ../src/KasumiWordType.cc:59 ../src/KasumiWordType.cc:60
+#: ../src/KasumiWordType.cc:61 ../src/KasumiWordType.cc:62
+#: ../src/KasumiWordType.cc:63
 msgid "Verb"
 msgstr ""
 
-#: KasumiWordType.cxx:55 KasumiWordType.cxx:64
+#: ../src/KasumiWordType.cc:55 ../src/KasumiWordType.cc:64
 msgid "Ka 5"
 msgstr ""
 
-#: KasumiWordType.cxx:56 KasumiWordType.cxx:65
+#: ../src/KasumiWordType.cc:56 ../src/KasumiWordType.cc:65
 msgid "Ga 5"
 msgstr ""
 
-#: KasumiWordType.cxx:57 KasumiWordType.cxx:66
+#: ../src/KasumiWordType.cc:57 ../src/KasumiWordType.cc:66
 msgid "Sa 5"
 msgstr ""
 
-#: KasumiWordType.cxx:58 KasumiWordType.cxx:67
+#: ../src/KasumiWordType.cc:58 ../src/KasumiWordType.cc:67
 msgid "Ta 5"
 msgstr ""
 
-#: KasumiWordType.cxx:59 KasumiWordType.cxx:68
+#: ../src/KasumiWordType.cc:59 ../src/KasumiWordType.cc:68
 msgid "Na 5"
 msgstr ""
 
-#: KasumiWordType.cxx:60 KasumiWordType.cxx:69
+#: ../src/KasumiWordType.cc:60 ../src/KasumiWordType.cc:69
 msgid "Ba 5"
 msgstr ""
 
-#: KasumiWordType.cxx:61 KasumiWordType.cxx:70
+#: ../src/KasumiWordType.cc:61 ../src/KasumiWordType.cc:70
 msgid "Ma 5"
 msgstr ""
 
-#: KasumiWordType.cxx:62 KasumiWordType.cxx:71
+#: ../src/KasumiWordType.cc:62 ../src/KasumiWordType.cc:71
 msgid "Ra 5"
 msgstr ""
 
-#: KasumiWordType.cxx:63 KasumiWordType.cxx:72
+#: ../src/KasumiWordType.cc:63 ../src/KasumiWordType.cc:72
 msgid "Wa 5"
 msgstr ""
 
-#: KasumiWordType.cxx:64 KasumiWordType.cxx:65 KasumiWordType.cxx:66
-#: KasumiWordType.cxx:67 KasumiWordType.cxx:68 KasumiWordType.cxx:69
-#: KasumiWordType.cxx:70 KasumiWordType.cxx:71 KasumiWordType.cxx:72
+#: ../src/KasumiWordType.cc:64 ../src/KasumiWordType.cc:65
+#: ../src/KasumiWordType.cc:66 ../src/KasumiWordType.cc:67
+#: ../src/KasumiWordType.cc:68 ../src/KasumiWordType.cc:69
+#: ../src/KasumiWordType.cc:70 ../src/KasumiWordType.cc:71
+#: ../src/KasumiWordType.cc:72
 msgid "Verb*"
 msgstr ""
+
+#, fuzzy
+#~ msgid ""
+#~ "If all the necessary items are filled in, add entered word and quit "
+#~ "registration."
+#~ msgstr ""
+#~ "Se tutti gli oggetti necessari sono stati riempiti, aggiungi la parola "
+#~ "inserita."
+
+#~ msgid "If all the necessary items are filled in, add entered word."
+#~ msgstr ""
+#~ "Se tutti gli oggetti necessari sono stati riempiti, aggiungi la parola "
+#~ "inserita."
+
+#~ msgid "Make the shift to manage mode to modify and remove registered words."
+#~ msgstr ""
+#~ "Passa a modalità gestione per modificare e rimuovere le parole registrate."
+
+#~ msgid "Save dictionary and quit this application."
+#~ msgstr "Salva il vocabolario ed esci da questa applicazione."
 
 #~ msgid "search"
 #~ msgstr "cerca"
