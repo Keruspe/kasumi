@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT(main.cxx, 2.0)
+AC_INIT([main.cxx],[2.0])
 AM_INIT_AUTOMAKE(kasumi, 2.5)
 AM_CONFIG_HEADER(config.h)
 
@@ -44,5 +44,6 @@ AC_CONFIG_FILES([
 kasumi.desktop
 ])
 
-AC_OUTPUT(Makefile intl/Makefile po/Makefile.in m4/Makefile )
+AC_CONFIG_FILES([Makefile intl/Makefile po/Makefile.in m4/Makefile ])
+AC_OUTPUT
 
