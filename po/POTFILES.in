@@ -1,0 +1,17 @@
+./main.cxx
+./KasumiString.hxx
+./KasumiDic.hxx
+./KasumiDic.cxx
+./KasumiWord.hxx
+./KasumiWord.cxx
+./KasumiString.cxx
+./KasumiString.hxx
+./KasumiException.hxx
+./KasumiException.cxx
+./KasumiMainWindow.hxx
+./KasumiMainWindow.cxx
+./KasumiAddWindow.hxx
+./KasumiAddWindow.cxx
+./KasumiConfiguration.cxx
+./KasumiConfiguration.hxx
+./KasumiWordType.cxx
