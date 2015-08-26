@@ -1,49 +1,66 @@
-dnl Process this file with autoconf to produce a configure script.
-AC_INIT([main.cxx],[2.0])
-AM_INIT_AUTOMAKE(kasumi, 2.5)
-AM_CONFIG_HEADER(config.h)
+AC_PREREQ([2.69])
+AC_INIT([kasumi], [2.6], [Marc-Antoine@Perennou.com])
 
-dnl Checks for programs.
+AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_SRCDIR([src/])
+AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_AUX_DIR([build-aux])
+AC_PREFIX_DEFAULT([/usr])
+
+AM_INIT_AUTOMAKE([1.11 subdir-objects check-news foreign no-dist-gzip dist-xz tar-ustar -Wall])
+AM_SILENT_RULES([yes])
+
+AC_PROG_AWK
+AC_PROG_SED
+AC_PROG_MKDIR_P
+AC_PROG_LN_S
+AC_PROG_INSTALL
+
+AC_PROG_MAKE_SET
+
+AC_PROG_CPP
 AC_PROG_CC
+AC_PROG_CC_C99
+AC_PROG_CC_C_O
 AC_PROG_CXX
 
-dnl Checks for gettext
-ALL_LINGUAS="ja it"
-AM_GNU_GETTEXT
+AC_C_INLINE
 
-dnl LDFLAGS="$LDFLAGS $INTLLIBS"
-dnl localedir='${prefix}/share/locale'
-dnl AC_SUBST(localedir)
-dnl AC_DEFINE(HAVE_CATGETS, 1,Define as 1 if you have catgets and don't want to use GNU gettext.)
-dnl AC_DEFINE(HAVE_GETTEXT, 1, Define as 1 if you have GNU gettext.)
-dnl AC_DEFINE(HAVE_LC_MESSAGES, 1, Define as 1 if you have LC_MESSAGES.)
-dnl AC_DEFINE(HAVE_STPCPY, 1, Define as 1 if you have stpcpy() function.)
-dnl AC_DEFINE(ENABLE_NLS, 1, Define as 1 if you want to use NLS.)
+AC_CHECK_HEADER_STDBOOL
 
-AM_ICONV
+CC_ATTRIBUTE_UNUSED
+CC_ATTRIBUTE_VISIBILITY([default])
 
-if test "x$am_cv_func_iconv" != "xyes"; then
-	AC_MSG_ERROR([Unable to find iconv(). iconv() is needed for Kasumi])
-fi
+GETTEXT_PACKAGE=$PACKAGE_NAME
+AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], ["$GETTEXT_PACKAGE"], [Gettext Package])
+AC_SUBST(GETTEXT_PACKAGE)
+IT_PROG_INTLTOOL([0.50.0])
 
-dnl Checks for libraries.
-AM_PATH_GTK_2_0(2.6.0, CFLAGS="$CFLAGS $GTK_CFLAGS" CPPFLAGS="$CPPFLAGS $GTK_CFLAGS" LIBS="$LIBS $GTK_LIBS", AC_MSG_ERROR(GTK+ >= 2.6.0 not found.))
-AC_CHECK_LIB(iconv, iconv)
-AC_CHECK_LIB(anthydic, anthy_dic_util_init)
-AC_CHECK_LIB(anthy, anthy_get_version_string)
+PKG_PROG_PKG_CONFIG([0.22])
 
-CFLAGS="$CFLAGS -Wall"
-CXXFLAGS="$CXXFLAGS -Wall"
+PKG_CHECK_MODULES(GTK, [gtk+-2.0 >= 2.6.0])
+PKG_CHECK_MODULES(ANTHY, [anthy])
 
-dnl Checks for header files.
-
-dnl Checks for typedefs, structures, and compiler characteristics.
-
-dnl Checks for library functions.
 AC_CONFIG_FILES([
-kasumi.desktop
+    Makefile
+    intl/Makefile
+    po/Makefile.in
+    kasumi.desktop
 ])
 
-AC_CONFIG_FILES([Makefile intl/Makefile po/Makefile.in m4/Makefile ])
 AC_OUTPUT
 
+AC_MSG_RESULT([
+    $PACKAGE_NAME $VERSION
+    ========
+
+    prefix:                 ${prefix}
+    exec_prefix:            ${exec_prefix}
+    sysconfdir:             ${sysconfdir}
+    libdir:                 ${libdir}
+    includedir:             ${includedir}
+
+    compiler:               ${CC}
+    cflags:                 ${CFLAGS}
+    ldflags:                ${LDFLAGS}
+])
