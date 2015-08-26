@@ -30,9 +30,8 @@ desktop_DATA = $(Desktop_in_files:.desktop.in=.desktop)
 
 localedir = $(datadir)/locale
 AM_CPPFLAGS=-DLOCALEDIR=\"$(localedir)\"
-SUBDIRS = intl m4 po
+SUBDIRS = po
 
 ACLOCAL_AMFLAGS = -I m4
 
 CLEANFILES = $(desktop_DATA)
-#EXTRA_DIST = config.rpath

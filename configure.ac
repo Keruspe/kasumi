@@ -43,7 +43,6 @@ PKG_CHECK_MODULES(ANTHY, [anthy])
 
 AC_CONFIG_FILES([
     Makefile
-    intl/Makefile
     po/Makefile.in
     kasumi.desktop
 ])
